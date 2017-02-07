@@ -274,18 +274,19 @@ sub read_dict {
     while (<F>) {
 	chomp;
 	s/^ *//;
-	split;
-	$freq{$_[1]}  = $_[0];
-	$header = substr($_[1],0,$wd);
+	my ($cnt, $word) = split;
+	$freq{$word}  = $cnt;
+	$header = substr($word,0,$wd);
 	if ($freq{"m,$header"}) {
-	    if ($freq{"m,$header"} < length($_[1])) {
-		$freq{"m,$header"} = length($_[1]);
+	    if ($freq{"m,$header"} < length($word)) {
+		$freq{"m,$header"} = length($word);
 	    }
 	} else {
-	    $freq{"m,$header"} = length($_[1]);
+	    $freq{"m,$header"} = length($word);
 	}
-	$freq{total} += $_[0];
+	$freq{total} += $cnt;
     }
+    print STDERR "Read total: ".$freq{total}."\n";
     close(F);
 }
 
