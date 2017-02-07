@@ -1,9 +1,12 @@
-mansegment.perl Version 1.1
+mansegment.perl Version 1.2
 
 mansegment.perl is a Chinese segmenter for both GB and BIG5 as long as
 the cooresponding word frqenuency dictionary is used.
 
 Run as: mansegment.perl [dictfile] < infile > outfile
+
+Version 1.2 is updated by Oleg Urzhumtcev to comply with new version of 
+Perl interpreter.
 
 Version 1.0 was written by Zhibiao Wu at LDC on April 12 1999. Version
 1.1 is an updated version by Xiaoyi Ma at LDC in March, 2003. The
