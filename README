@@ -5,6 +5,10 @@ the cooresponding word frqenuency dictionary is used.
 
 Run as: mansegment.perl [dictfile] < infile > outfile
 
+Or, alternatively, use run.sh infile outfile
+This is a wrapper for simpler usage for those who are not used to 
+Unix pipelines and output redirection.
+
 Version 1.2 is updated by Oleg Urzhumtcev to comply with new version of 
 Perl interpreter.
 
